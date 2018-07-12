@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ahmedkhattak.kickstarter.Activities.EditBankInfoActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/materialize_toolbar"
+            android:background="@color/colorPrimary"
+            android:theme="@style/toolbar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+
+    <ScrollView
+        android:layout_below="@id/appBarLayout"
+        android:id="@+id/scollViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="16dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:text="@string/add_bank_info"
+                android:textStyle="bold"/>
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:hint="@string/bank_branch"
+                app:errorEnabled="true"
+                android:id="@+id/bankBranchInputLayout">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/bankBranchEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:hint="@string/bank_account_number"
+                app:errorEnabled="true"
+                android:id="@+id/bankAccNoInputLayout">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/bankAccNoEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:text="@string/add_easy_paisa_info"
+                android:textStyle="bold"/>
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:hint="@string/cnic"
+                app:errorEnabled="true"
+                android:id="@+id/cnicInputLayout">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/cnicEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:hint="@string/easy_paisa_phone_number"
+                app:errorEnabled="true"
+                android:id="@+id/easyPaisaPhnoInputLayout">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/easyPaisaPhnoEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/submitActionButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/colorAccent"
+                android:textSize="18sp"
+                android:text="@string/submit"/>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ahmedkhattak.kickstarter.Activities.IndividualNotificationsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/individualNotificationToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/materialize_toolbar"
+            android:background="@color/colorPrimary"
+            android:theme="@style/toolbar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="visible" />
+
+    <TextView
+
+        android:id="@+id/errorText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/an_error_occured_please_try_again_later"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutNotification"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appBarLayout"
+        android:padding="12dp"
+        android:visibility="visible">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/projectImageView"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/gradient"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/projectImageView"
+            android:layout_marginTop="13dp"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:text="Total target : PKR "
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/totalTargetTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2"
+
+            android:paddingTop="10dp"
+            android:text="65000"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="13dp"
+            android:paddingBottom="15dp"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:text="Funded : PKR "
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/FundedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView3"
+            android:layout_toEndOf="@+id/textView3"
+
+            android:paddingTop="10dp"
+            android:text="20000"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/backedUserNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="13dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:text="Ebad Ali"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ProjectNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/backedUserNameTextView"
+            android:layout_toEndOf="@+id/backedUserNameTextView"
+            android:paddingTop="10dp"
+            android:text="backed your BattleField 1 Project"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/backedUserNameTextView"
+            android:layout_marginTop="13dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="10dp"
+            android:text="Transaction pin : "
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/transactionPINTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView5"
+            android:layout_toEndOf="@+id/textView5"
+            android:text="h5rf015k5T"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/fundReceivedActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Fund Received"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/textView5"
+            android:textSize="18sp"
+            app:backgroundTint="@color/colorAccent" />
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

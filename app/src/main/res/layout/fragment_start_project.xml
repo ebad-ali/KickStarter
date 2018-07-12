@@ -1,0 +1,225 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.example.ahmedkhattak.kickstarter.Fragments.StartProjectFragment">
+
+
+    <TextView
+        android:id="@+id/errorText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/an_error_occured_please_try_again_later"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:visibility="visible" />
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ScrollView
+            android:id="@+id/scollViewContainer"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="16dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="16dp">
+
+                <LinearLayout
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"/>
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/titleTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:hint="@string/title"
+                    app:errorEnabled="true">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/titleInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/categoryTitle"/>
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/categoryInputSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    />
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/locationTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:hint="@string/location"
+                    app:errorEnabled="true">
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/locationInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </android.support.design.widget.TextInputLayout>
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:hint="@string/company"
+                    app:errorEnabled="true"
+                    android:id="@+id/companyTextInputLayout">
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/companyInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </android.support.design.widget.TextInputLayout>
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:hint="@string/fund_target_in_pkr"
+                    android:id="@+id/fundTargetTextInputLayout"
+                    app:errorEnabled="true">
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:id="@+id/fundTargetInputEditText"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:hint="@string/description"
+                    app:errorEnabled="true"
+                    android:id="@+id/descriptionTextInputLayout"
+                    >
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:id="@+id/descriptionInputEditText"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:hint="@string/video_optional"
+                    app:errorEnabled="true"
+                    android:id="@+id/videoTextInputLayout">
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:id="@+id/videoInputEditText"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/projectImage"
+                        android:scaleType="centerInside"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/gradient"/>
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/projectImageSelectActionButton"
+                    android:layout_marginStart="16dp"
+                    app:backgroundTint="@color/colorAccent"
+                    android:textColor="@color/white"
+                    android:text="@string/choose_image"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"/>
+
+                </LinearLayout>
+
+
+
+
+
+
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/submitActionButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/colorAccent"
+                    android:textSize="18sp"
+                    android:text="@string/submit"/>
+            </android.support.v7.widget.LinearLayoutCompat>
+        </ScrollView>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

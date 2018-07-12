@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="searchTypes">
+
+        <item>By Project</item>
+        <item>By Content Creators</item>
+        <item>By Funders</item>
+        <item>By Name</item>
+    </string-array>
+
+</resources>

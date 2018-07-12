@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    android:id="@+id/home_fragment_project_list_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    >
+
+<android.support.v7.widget.AppCompatImageView
+    android:scaleType="centerCrop"
+    android:id="@+id/projectImageView"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="@drawable/gradient"
+    android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/projectTitleTextView"
+        android:text="Ballon Drone"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/projectDescriptionTextView"
+        android:text="I have learned that long-term goals are best achieved when I break them into shorter goals. My short-term goal is to find a position that w"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</android.support.v7.widget.LinearLayoutCompat>
